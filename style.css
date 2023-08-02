@@ -155,6 +155,7 @@ button {
   background-color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
 }
+
 .btn--light {
   background-color: var(--clr-light);
   border: 1px solid var(--clr-light-border);
@@ -166,9 +167,11 @@ button {
 .flex {
   display: flex;
 }
+
 .column {
   flex-direction: column;
 }
+
 .grid {
   display: grid;
 }
@@ -291,11 +294,6 @@ button {
   opacity: 1;
 }
 
-/* projects */
-.projects {
-  padding-inline: 2em;
-}
-
 .projects__nav {
   justify-content: space-between;
 }
@@ -316,25 +314,34 @@ button {
   color: white;
 }
 
-.project__columns {
-  justify-content: center;
-  gap: 5vw;
-}
-
 .project__cards {
-  max-height: 1510px;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 3em;
+  display: grid;
+  margin: 0 auto;
 }
 
 .project__card {
-  width: 100%;
+  margin-bottom: 60px;
+  width: 405px;
+}
+
+@media screen and (min-width: 550px) {
+  .projects {
+    padding-inline: 2em;
+  }
+
+  .project__card {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .project__card {
+    margin-bottom: 128px;
+  }
 }
 
 .project__cover > img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
