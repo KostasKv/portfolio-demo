@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
 
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
       integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
@@ -26,9 +28,9 @@
     <header class="flex">
       <div class="avatar__container flex">
         <div class="avatar">
-          <img src="https://i.pravatar.cc/150?img=12" alt="John's avatar" />
+          <img src="assets/avatar.png" alt="John's avatar" />
         </div>
-        <h3>John Smith</h3>
+        <p>&copy; John Smith</p>
       </div>
       <nav>
         <ul class="nav__links flex">
@@ -42,6 +44,7 @@
             <a href="" class="nav__link">Solutions</a>
           </li>
         </ul>
+        <button></button>
       </nav>
     </header>
     <main class="flex column">
@@ -75,7 +78,7 @@
           </button>
         </div>
         <div class="summary flex column">
-          <h4>
+          <p>
             Welcome, make yourself at home. I am a multidisciplinary web
             designer, designing and building beautiful digital products, for
             companies around the world.
@@ -84,7 +87,7 @@
             pleasing, and I am dedicated to delivering exceptional user
             experiences through thoughtful design and meticulous attention to
             detail.
-          </h4>
+          </p>
           <div class="button__container flex">
             <a href="#" class="resume__link"> Download resume </a>
             <button class="btn--accent">
@@ -162,9 +165,7 @@
         <div class="project__cards">
           <div class="project__card">
             <div class="project__cover">
-              <img
-                src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGVjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
-                alt="project cover image" />
+              <img src="assets/uideli.png" alt="UIDeli.com design preview" />
             </div>
             <div class="card__info">
               <h4>UIDeli.com</h4>
@@ -178,34 +179,8 @@
           <div class="project__card">
             <div class="project__cover">
               <img
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
-                alt="project cover image" />
-            </div>
-            <div class="card__info">
-              <h4>Switch Black</h4>
-              <p>
-                <span class="project__tag">Design</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img src="assets/another-one.png" alt="project cover image" />
-            </div>
-            <div class="card__info">
-              <h4>Another One</h4>
-              <p>
-                <span class="project__tag">Development</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img
-                src="https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHRlY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60"
-                alt="project cover image" />
+                src="assets/koto-studio.png"
+                alt="Koto Studio app showcase" />
             </div>
             <div class="card__info">
               <h4>Koto Studio</h4>
@@ -218,8 +193,20 @@
           <div class="project__card">
             <div class="project__cover">
               <img
-                src="https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fHRlY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60"
-                alt="project cover image" />
+                src="assets/switch-black.png"
+                alt="Switch Black site design preview" />
+            </div>
+            <div class="card__info">
+              <h4>Switch Black</h4>
+              <p>
+                <span class="project__tag">Design</span>
+                <span class="project__year">2023</span>
+              </p>
+            </div>
+          </div>
+          <div class="project__card">
+            <div class="project__cover">
+              <img src="assets/remarket.png" alt="ReMarket site preview" />
             </div>
             <div class="card__info">
               <h4>ReMarket</h4>
@@ -232,8 +219,22 @@
           <div class="project__card">
             <div class="project__cover">
               <img
-                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHRlY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60"
-                alt="project cover image" />
+                src="assets/another-one.png"
+                alt="Site demo shown on a laptop" />
+            </div>
+            <div class="card__info">
+              <h4>Another One</h4>
+              <p>
+                <span class="project__tag">Development</span>
+                <span class="project__year">2023</span>
+              </p>
+            </div>
+          </div>
+          <div class="project__card">
+            <div class="project__cover">
+              <img
+                src="assets/blender-renders.png"
+                alt="Blender Renders info card preview" />
             </div>
             <div class="card__info">
               <h4>Blender Renders</h4>
@@ -244,7 +245,6 @@
               </p>
             </div>
           </div>
-          <!-- </div> -->
         </div>
         <button class="btn--light">Load more</button>
       </section>
@@ -310,7 +310,7 @@
         <div class="section__footer flex column">
           <div class="section__footer-row flex">
             <div class="avatar">
-              <img src="https://i.pravatar.cc/150?img=12" alt="John's avatar" />
+              <img src="assets/avatar.png" alt="John's avatar" />
             </div>
             <button class="btn--light">Start a project</button>
             <button class="btn--accent">
