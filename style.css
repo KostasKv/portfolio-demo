@@ -1,10 +1,8 @@
-@import url("https://fonts.cdnfonts.com/css/satoshi");
-
 :root {
-  --clr-primary: rgba(31, 30, 38, 1);
-  --clr-accent: rgba(72, 62, 208, 1);
-  --clr-light: rgba(255, 255, 255, 1);
-  --clr-light-border: rgba(202, 202, 204, 0.8);
+  --clr-primary: hsl(248, 12%, 13%);
+  --clr-accent: hsl(244, 61%, 53%);
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-light-border: hsl(240, 2%, 80%);
 
   --fw-light: 400;
   --fw-regular: 500;
@@ -57,25 +55,28 @@ footer {
 
 h1 {
   max-width: 32ch;
-  font-size: 2em;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 3.25rem;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: 500;
   max-width: 30ch;
 }
 
 p {
   max-width: 37ch;
+  line-height: 1.4;
 }
 
 a {
@@ -88,6 +89,8 @@ button {
   color: white;
   flex-shrink: 0;
   cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
 .hover-animation__wrapper {
@@ -195,6 +198,10 @@ button {
   transition: transform 500ms, opacity 500ms ease-out;
 }
 
+.avatar__container > p {
+  font-weight: 500;
+}
+
 .hideAvatar {
   opacity: 0;
   transform: translateX(-100px);
@@ -234,7 +241,7 @@ nav > button {
   height: 2.5rem;
   width: 2.5rem;
   vertical-align: middle;
-  border: 1px #cacacc solid;
+  border: 1px var(--clr-light-border) solid;
 }
 
 nav > button::after {
@@ -297,23 +304,29 @@ nav > button::after {
   height: 2em;
 }
 
+.summary > p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 /* resume links*/
 .resume__link {
   height: min-content;
   position: relative;
   cursor: pointer;
   z-index: 0;
+  font-weight: 500;
 }
 
 .resume__link::after {
   content: "";
   width: 100%;
-  height: 1px;
+  height: 2px;
   position: absolute;
   bottom: 0;
   left: 0;
   transform: scaleX(1);
-  opacity: 0.5;
+  opacity: 0.8;
   background-color: var(--clr-primary);
   transform-origin: left bottom;
 }
