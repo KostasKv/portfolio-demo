@@ -256,6 +256,12 @@ nav > button::after {
   nav > button {
     display: none;
   }
+
+  .service__options {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin-block: 2em;
+  }
 }
 
 .nav__links > li {
@@ -405,12 +411,6 @@ nav > button::after {
 .services > h2 {
   font-size: 3em;
   font-weight: 500;
-  margin-block: 2em;
-}
-
-.service__options {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
   margin-block: 2em;
 }
 
