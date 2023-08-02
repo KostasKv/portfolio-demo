@@ -39,7 +39,6 @@ header {
   top: 0;
   height: 8em;
   justify-content: space-between;
-  align-items: center;
   padding-inline: 2em;
   z-index: 1000;
 }
@@ -203,8 +202,8 @@ button {
 }
 
 .avatar {
-  width: 4em;
-  height: 4em;
+  width: 6rem;
+  height: 6rem;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -216,10 +215,40 @@ button {
 }
 
 /* nav */
+nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav__links {
+  display: none;
   border: 1px solid var(--clr-light-border);
   background-color: var(--clr-light);
   border-radius: 100vw;
+}
+
+nav > button {
+  color: black;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  vertical-align: middle;
+  border: 1px #cacacc solid;
+}
+
+nav > button::after {
+  content: "•••";
+}
+
+@media screen and (min-width: 600px) {
+  .nav__links {
+    display: flex;
+  }
+
+  nav > button {
+    display: none;
+  }
 }
 
 .nav__links > li {
