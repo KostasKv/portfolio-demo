@@ -8,6 +8,8 @@
 
   --fw-light: 400;
   --fw-regular: 500;
+
+  scroll-behavior: smooth;
 }
 
 /* reset */
@@ -41,7 +43,7 @@ footer {
 }
 
 header {
-  position: sticky;
+  /* position: sticky; */
   padding-top: clamp(1.25rem, 7vw - 0.5rem, 2.5rem);
   top: 0;
   justify-content: space-between;
@@ -159,6 +161,9 @@ button {
 }
 
 .btn--accent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 4em;
   background-color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
@@ -261,30 +266,19 @@ nav > button::after {
   padding: 0.75em 1.5em;
   border-radius: inherit;
   border: 1px solid transparent;
-  background: linear-gradient(
-    90deg,
-    rgba(31, 30, 38, 1) 50%,
-    rgba(255, 255, 255, 1) 50%
-  );
-  background-size: 200%;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-clip: padding-box;
   font-size: 1em;
   font-weight: 500;
-  transition: color 200ms ease-in 175ms, background 480ms ease-out;
 }
 
 .nav__links > li:hover {
-  background-position: left center;
-  color: white;
+  color: var(--clr-light);
+  background: var(--clr-primary);
+  transition-duration: 100ms;
 }
 
-.nav__links > [aria-current="true"] {
+/* .nav__links > [aria-current="true"] {
   border-color: var(--clr-light-border);
-  background-position-x: left;
-  color: white;
-}
+} */
 
 /* introduction section */
 .introduction {
@@ -368,9 +362,11 @@ nav > button::after {
   padding: 0.75em 1.5em;
   border-radius: 100vw;
   border: 1px solid var(--clr-light-border);
+  cursor: pointer;
 }
 
-.categories > li:first-child {
+li[data-selected="true"] {
+  border-color: transparent;
   background-color: var(--clr-primary);
   color: white;
 }
@@ -495,8 +491,7 @@ nav > button::after {
 }
 
 .section__footer-row > button:last-of-type {
-  margin-left: 0.125rem;
-  padding-top: 0.33rem;
+  margin-left: clamp(0.125rem, 1vw - 0.25rem, 0.25rem);
   height: 3.125rem;
   width: 3.125rem;
 }
@@ -510,6 +505,7 @@ nav > button::after {
 .section__footer > p > span {
   color: var(--clr-light);
   border-bottom: 1px solid var(--clr-light);
+  cursor: pointer;
 }
 
 .social__label {

@@ -35,20 +35,20 @@
       <nav>
         <ul class="nav__links flex">
           <li aria-current="true">
-            <a href="" class="nav__link">About</a>
+            <a href="#about" class="nav__link">About</a>
           </li>
           <li aria-current="false">
-            <a href="" class="nav__link">Work</a>
+            <a href="#work" class="nav__link">Work</a>
           </li>
           <li aria-current="false">
-            <a href="" class="nav__link">Solutions</a>
+            <a href="#solutions" class="nav__link">Solutions</a>
           </li>
         </ul>
         <button></button>
       </nav>
     </header>
     <main class="flex column">
-      <section class="introduction flex column">
+      <section id="about" class="introduction flex column">
         <h1>
           I'm John, and I turn ideas into digital experiences that people love.
         </h1>
@@ -89,7 +89,7 @@
             detail.
           </p>
           <div class="button__container flex">
-            <a href="#" class="resume__link"> Download resume </a>
+            <a class="resume__link"> Download resume </a>
             <button class="btn--accent">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -109,18 +109,18 @@
           </div>
         </div>
       </section>
-      <section class="projects flex column">
+      <section id="work" class="projects flex column">
         <h2>The work I do</h2>
         <div class="projects__nav flex">
           <ul class="categories flex">
-            <li>
-              <a href="" class="category__link">All</a>
+            <li data-selected="true">
+              <a class="category__link">All</a>
             </li>
             <li>
-              <a href="" class="category__link">Design</a>
+              <a class="category__link">Design</a>
             </li>
             <li>
-              <a href="" class="category__link">Development</a>
+              <a class="category__link">Development</a>
             </li>
           </ul>
           <ul class="view__toggle">
@@ -247,7 +247,7 @@
         </div>
         <button class="btn--light">Load more</button>
       </section>
-      <section class="services">
+      <section id="solutions" class="services">
         <h2>I can help you with</h2>
         <div class="service__options grid">
           <div class="service__option flex column">

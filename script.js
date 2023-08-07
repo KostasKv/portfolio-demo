@@ -7,6 +7,22 @@ const options1 = {
   rootMargin: "-150px",
 };
 
+// var link;
+// var currentLink = navLinks[0];
+
+// for (link of navLinks) {
+//   link.addEventListener("click", (e) => {
+//     currentLink = link;
+//     let otherLink;
+
+//     for (otherLink of navLinks) {
+//       if (currentLink === otherLink) {
+//       }
+//     }
+//     // link.ariaCurrent = "true";
+//   });
+// }
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
