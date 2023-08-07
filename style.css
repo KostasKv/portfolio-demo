@@ -1,10 +1,10 @@
 :root {
-  --clr-primary: hsl(248, 12%, 13%);
-  --clr-accent: hsl(244, 61%, 53%);
-  --clr-light: hsl(0, 0%, 100%);
-  --clr-light-300: #e5e3f5;
-  --clr-light-border: hsl(240, 2%, 80%);
-  --clr-dark-border: hsl(0, 0%, 42%);
+  --clr-primary: #1f1e26;
+  --clr-accent: #483ed0;
+  --clr-light-100: #ffffff;
+  --clr-light-300: #ecebf5;
+  --clr-light-border: #cbcbcd;
+  --clr-dark-border: #6a6a6b;
 
   --fw-light: 400;
   --fw-regular: 500;
@@ -62,14 +62,14 @@ footer {
 
 h1 {
   margin-top: 3rem;
-  max-width: 32ch;
-  font-size: 2.5rem;
+  max-width: 24ch;
+  font-size: clamp(2.5rem, 0.75rem + 5vw, 3.75rem);
   font-weight: 500;
-  line-height: 3.25rem;
+  line-height: clamp(3.25rem, 1.25rem + 5vw, 4.875rem);
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
 }
 
 h3 {
@@ -83,7 +83,7 @@ h4 {
 }
 
 p {
-  max-width: 37ch;
+  max-width: 34ch;
   line-height: 1.4;
 }
 
@@ -97,8 +97,8 @@ button {
   color: white;
   flex-shrink: 0;
   cursor: pointer;
-  font-size: 1rem;
   font-family: inherit;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .hover-animation__wrapper {
@@ -126,7 +126,7 @@ button {
   background: conic-gradient(
     transparent 30deg,
     var(--clr-conic) 165deg,
-    var(--clr-light) 240deg,
+    var(--clr-light-100) 240deg,
     transparent 240deg
   );
   transition: opacity 1s ease-in forwards;
@@ -150,14 +150,11 @@ button {
 }
 
 .btn--primary {
-  width: calc(100% -8px);
-  height: calc(100% -2px);
-  position: absolute;
-  inset: -2px 4px;
-  margin: auto;
-  padding-block: 16px;
-  background-color: inherit;
-  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-primary);
+  border: 1px solid transparent;
+  padding: 0.88em 1.5em;
 }
 
 .btn--accent {
@@ -170,7 +167,7 @@ button {
 }
 
 .btn--light {
-  background-color: var(--clr-light);
+  background-color: var(--clr-light-100);
   border: 1px solid var(--clr-light-border);
   color: var(--clr-primary);
   font-weight: 500;
@@ -203,7 +200,7 @@ button {
 /* header */
 .avatar__container {
   height: fit-content;
-  background-color: var(--clr-light);
+  background-color: var(--clr-light-100);
   border-radius: 100vw;
   align-items: center;
   gap: 1em;
@@ -244,7 +241,7 @@ nav {
 .nav__links {
   display: none;
   border: 1px solid var(--clr-light-border);
-  background-color: var(--clr-light);
+  background-color: var(--clr-light-100);
   border-radius: 100vw;
 }
 
@@ -271,7 +268,7 @@ nav > button::after {
 }
 
 .nav__links > li:hover {
-  color: var(--clr-light);
+  color: var(--clr-light-100);
   background: var(--clr-primary);
   transition-duration: 100ms;
 }
@@ -294,6 +291,7 @@ nav > button::after {
 
 .introduction > p {
   margin-top: clamp(1.25rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .summary {
@@ -312,7 +310,7 @@ nav > button::after {
 
 .summary > p {
   margin-top: clamp(3.75rem, 12vw, 10rem);
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 500;
 }
 
@@ -363,6 +361,7 @@ nav > button::after {
   border-radius: 100vw;
   border: 1px solid var(--clr-light-border);
   cursor: pointer;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 li[data-selected="true"] {
@@ -418,8 +417,10 @@ li[data-selected="true"] {
 .services > h2 {
   font-size: 3em;
   font-weight: 500;
+  padding-right: 5rem;
   margin-top: clamp(3.75rem, 9vw, 8rem);
   margin-bottom: clamp(3.38rem, 8vw, 5rem);
+  line-height: 1.3;
 }
 
 .service__options {
@@ -442,6 +443,8 @@ li[data-selected="true"] {
 
 .service__option p {
   margin-top: 1rem;
+  color: var(--clr-light-300);
+  font-weight: 300;
 }
 
 .service__option ul {
@@ -450,7 +453,7 @@ li[data-selected="true"] {
 }
 
 .service__options ul > li {
-  font-size: 1.5em;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 /* pricing section */
@@ -460,12 +463,18 @@ li[data-selected="true"] {
 
 .pricing > p {
   margin-top: 1rem;
+  color: var(--clr-light-300);
+  font-weight: 300;
+  max-width: 58ch;
 }
 
 .pricing > p:first-child {
   margin-top: 0;
-  font-size: 1.75rem;
-  max-width: 49ch;
+  max-width: 38.5ch;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.3;
+  color: var(--clr-light-100);
+  font-weight: 500;
 }
 
 .pricing > h2 {
@@ -473,7 +482,7 @@ li[data-selected="true"] {
 }
 
 .pricing > h2 span {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 400;
   color: var(--clr-light-300);
 }
@@ -503,13 +512,14 @@ li[data-selected="true"] {
 }
 
 .section__footer > p > span {
-  color: var(--clr-light);
-  border-bottom: 1px solid var(--clr-light);
+  color: var(--clr-light-100);
+  border-bottom: 1px solid var(--clr-light-100);
   cursor: pointer;
 }
 
 .social__label {
   color: var(--clr-dark-border);
+  max-width: none;
 }
 
 .social__label::after {
@@ -524,6 +534,7 @@ li[data-selected="true"] {
 .social__links {
   margin-top: 2rem;
   gap: clamp(0.75rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
 /* animations */
@@ -553,9 +564,9 @@ li[data-selected="true"] {
     margin-bottom: 128px;
   }
 
-  .view__toggle {
+  /* .view__toggle {
     display: flex;
-  }
+  } */
 }
 
 @media screen and (min-width: 600px) {
@@ -571,5 +582,9 @@ li[data-selected="true"] {
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     margin-block: 2em;
+  }
+
+  .btn--primary {
+    padding: 1.5em 2.75em;
   }
 }
