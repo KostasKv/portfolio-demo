@@ -34,12 +34,17 @@ body > * {
   width: 100%;
 }
 
+header,
+section,
+footer {
+  padding-inline: clamp(1.25rem, 7vw - 0.5rem, 5rem);
+}
+
 header {
   position: sticky;
+  padding-top: clamp(1.25rem, 7vw - 0.5rem, 2.5rem);
   top: 0;
-  height: 8rem;
   justify-content: space-between;
-  padding-inline: 1.25rem;
   z-index: 1000;
 }
 
@@ -48,17 +53,13 @@ main {
 }
 
 footer {
-  padding-inline: 1.25rem;
-  padding-bottom: 3rem;
+  padding-bottom: clamp(3rem, 5vw, 4rem);
   background-color: var(--clr-primary);
   color: white;
 }
 
-section {
-  padding-inline: 1.25rem;
-}
-
 h1 {
+  margin-top: 3rem;
   max-width: 32ch;
   font-size: 2.5rem;
   font-weight: 500;
@@ -187,7 +188,7 @@ button {
 
 .button__container {
   gap: 0.13rem;
-  margin-top: 2rem;
+  margin-top: clamp(2rem, 3.5vw, 3rem);
   align-items: center;
   isolation: isolate;
 }
@@ -196,9 +197,9 @@ button {
 
 /* header */
 .avatar__container {
+  height: fit-content;
   background-color: var(--clr-light);
   border-radius: 100vw;
-  padding: 0.25em 1.25em 0.25em 0.25em;
   align-items: center;
   gap: 1em;
   transform: translateX(0);
@@ -292,13 +293,13 @@ nav > button::after {
 
 .introduction::after {
   content: "";
-  margin-top: 3.75rem;
+  margin-top: clamp(3.75rem, 12vw, 10rem);
   height: 1px;
   background: var(--clr-light-border);
 }
 
 .introduction > p {
-  margin-top: 1.25rem;
+  margin-top: clamp(1.25rem, 3vw, 1.5rem);
 }
 
 .summary {
@@ -316,7 +317,7 @@ nav > button::after {
 }
 
 .summary > p {
-  margin-top: 3.75rem;
+  margin-top: clamp(3.75rem, 12vw, 10rem);
   font-size: 1.25rem;
   font-weight: 500;
 }
@@ -350,8 +351,8 @@ nav > button::after {
 
 /* Projects */
 .projects {
-  padding-top: 1.5rem;
-  padding-bottom: 3.77rem;
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  padding-bottom: clamp(3.77rem, 12vw, 10rem);
 }
 
 .projects__nav {
@@ -359,8 +360,8 @@ nav > button::after {
 }
 
 .categories {
-  margin-top: 1rem;
-  gap: 0.25em;
+  margin-top: clamp(1rem, 3vw, 2.5rem);
+  gap: clamp(0.25rem, 2vw - 0.5rem, 1rem);
 }
 
 .categories > li {
@@ -392,6 +393,10 @@ nav > button::after {
   margin-top: 0.65rem;
 }
 
+.card__info > p {
+  margin-top: clamp(0.25rem, 1vw, 0.5rem);
+}
+
 .project__cover > img {
   width: 100%;
   height: 100%;
@@ -403,7 +408,7 @@ nav > button::after {
 }
 
 .projects > .btn--light {
-  margin-top: 2.5rem;
+  margin-top: clamp(2.5rem, 5vw, 3rem);
   margin-inline: auto;
 }
 
@@ -411,13 +416,14 @@ nav > button::after {
 .services {
   background-color: var(--clr-primary);
   color: white;
-  padding-bottom: 5.19rem;
+  padding-bottom: clamp(5.19rem, 9vw, 8rem);
 }
 
 .services > h2 {
   font-size: 3em;
   font-weight: 500;
-  margin-block: 3.75rem 3.38rem;
+  margin-top: clamp(3.75rem, 9vw, 8rem);
+  margin-bottom: clamp(3.38rem, 8vw, 5rem);
 }
 
 .service__options {
@@ -425,24 +431,25 @@ nav > button::after {
   gap: 3.75rem;
 }
 
-.service__options h4 {
-  margin-top: 1rem;
-  font-size: 2.5em;
-}
-
-.service__option {
-  gap: 1em;
-}
-
 .service__option::before {
   counter-increment: options;
   content: counter(options, decimal-leading-zero);
-  padding-bottom: 0.75rem;
+  padding-bottom: clamp(0.75rem, 2vw, 1rem);
   border-bottom: 1px var(--clr-dark-border) solid;
   color: var(--clr-dark-border);
 }
 
-.service__options ul {
+.service__option h4 {
+  margin-top: 2rem;
+  font-size: 2.5em;
+}
+
+.service__option p {
+  margin-top: 1rem;
+}
+
+.service__option ul {
+  margin-top: clamp(1rem, 3vw, 2rem);
   gap: 0.75em;
 }
 
@@ -452,7 +459,7 @@ nav > button::after {
 
 /* pricing section */
 .pricing {
-  margin-top: 3.75rem;
+  margin-top: clamp(3.75rem, 10vw, 7.13rem);
 }
 
 .pricing > p {
@@ -460,6 +467,7 @@ nav > button::after {
 }
 
 .pricing > p:first-child {
+  margin-top: 0;
   font-size: 1.75rem;
   max-width: 49ch;
 }
@@ -476,7 +484,7 @@ nav > button::after {
 
 /* section footer */
 .section__footer-row {
-  margin-top: 2rem;
+  margin-top: clamp(2rem, 7vw, 5rem);
   align-items: center;
 }
 
@@ -494,7 +502,7 @@ nav > button::after {
 }
 
 .section__footer > p {
-  margin-top: 1rem;
+  margin-top: clamp(1rem, 4vw, 3rem);
   color: var(--clr-light-border);
   line-height: 1.8rem;
 }
@@ -513,13 +521,13 @@ nav > button::after {
   display: block;
   height: 1px;
   width: 100%;
-  margin-top: 0.75rem;
+  margin-top: clamp(0.75rem, 2vw, 1rem);
   background-color: var(--clr-dark-border);
 }
 
 .social__links {
   margin-top: 2rem;
-  gap: 0.75rem;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 /* animations */
@@ -535,10 +543,6 @@ nav > button::after {
 }
 
 @media screen and (min-width: 550px) {
-  .projects {
-    padding-inline: 2em;
-  }
-
   .project__card {
     margin-bottom: 80px;
   }
