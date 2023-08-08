@@ -1,6 +1,7 @@
 :root {
   --clr-primary: #1f1e26;
-  --clr-accent: #483ed0;
+  --clr-accent: #ff88dc;
+  --clr-background: #91a6ff;
   --clr-light-100: #ffffff;
   --clr-light-300: #ecebf5;
   --clr-light-border: #cbcbcd;
@@ -29,6 +30,7 @@ body {
   font-family: "Satoshi", sans-serif;
   font-size: 1rem;
   color: var(--clr-primary);
+  background-color: var(--clr-background);
   align-items: center;
 }
 
@@ -200,7 +202,7 @@ button {
 /* header */
 .avatar__container {
   height: fit-content;
-  background-color: var(--clr-light-100);
+  background-color: var(--clr-background);
   border-radius: 100vw;
   align-items: center;
   gap: 1em;
@@ -240,8 +242,9 @@ nav {
 
 .nav__links {
   display: none;
-  border: 1px solid var(--clr-light-border);
-  background-color: var(--clr-light-100);
+  /* border: 2px solid black; */
+  background-color: var(--clr-accent);
+  color: white;
   border-radius: 100vw;
 }
 
@@ -286,7 +289,7 @@ nav > button::after {
   content: "";
   margin-top: clamp(3.75rem, 12vw, 10rem);
   height: 1px;
-  background: var(--clr-light-border);
+  background: var(--clr-primary);
 }
 
 .introduction > p {
@@ -359,7 +362,7 @@ nav > button::after {
 .categories > li {
   padding: 0.75em 1.5em;
   border-radius: 100vw;
-  border: 1px solid var(--clr-light-border);
+  border: 1px solid var(--clr-primary);
   cursor: pointer;
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
@@ -396,6 +399,7 @@ li[data-selected="true"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 13px solid var(--clr-accent);
 }
 
 .project__year {
@@ -405,6 +409,9 @@ li[data-selected="true"] {
 .projects > .btn--light {
   margin-top: clamp(2.5rem, 5vw, 3rem);
   margin-inline: auto;
+  background-color: var(--clr-accent);
+  border: none;
+  color: white;
 }
 
 /* services */
