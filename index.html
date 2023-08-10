@@ -110,17 +110,20 @@
       <section id="work" class="projects flex column">
         <h2>The work I do</h2>
         <div class="projects__nav flex">
-          <ul class="categories flex">
+          <ol class="categories flex">
             <li selected="true">
-              <a class="category__link">All</a>
+              <input type="radio" name="category" id="category-all" checked />
+              <label for="category-all">All</label>
             </li>
             <li>
-              <a class="category__link">Design</a>
+              <input type="radio" name="category" id="category-design" />
+              <label for="category-design">Design</label>
             </li>
             <li>
-              <a class="category__link">Development</a>
+              <input type="radio" name="category" id="category-development" />
+              <label for="category-development">Development</label>
             </li>
-          </ul>
+          </ol>
           <ul class="view__toggle">
             <li id="gridView">
               <svg
