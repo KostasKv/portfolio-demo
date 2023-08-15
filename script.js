@@ -7,12 +7,12 @@ window.addEventListener("scroll", () => {
     : avatar.classList.remove("hideAvatar");
 });
 
-const projectCards = document.querySelector(".project__cards");
+const projectCards = document.querySelector(".work__cards-container");
 
 // Using Masonry plugin to achieve masonry layout for project cards
 // See https://masonry.desandro.com/
 var masonry = new Masonry(projectCards, {
-  itemSelector: ".project__card",
+  itemSelector: ".work__card",
   fitWidth: true,
   gutter: 128,
 });
@@ -30,7 +30,7 @@ function matchProjectCardSizeDependingOnWindowSize() {
     width = "300px";
   }
 
-  var cards = document.querySelectorAll(".project__card");
+  var cards = document.querySelectorAll(".work__card");
 
   cards.forEach((card) => {
     card.style.maxWidth = width;

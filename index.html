@@ -24,289 +24,44 @@
     <title>Portfolio</title>
   </head>
 
-  <body class="flex column">
-    <header class="flex">
-      <div class="avatar__container flex">
-        <div class="avatar">
-          <img src="assets/avatar.png" alt="John's avatar" />
-        </div>
-        <p>&copy; John Smith</p>
-      </div>
-      <nav>
-        <ul class="nav__links flex">
-          <li aria-current="true">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li aria-current="false">
-            <a href="#work" class="nav__link">Work</a>
-          </li>
-          <li aria-current="false">
-            <a href="#solutions" class="nav__link">Solutions</a>
-          </li>
-        </ul>
-        <button></button>
-      </nav>
-    </header>
-    <main class="flex column">
-      <section id="about" class="introduction flex column">
-        <h1>
-          I'm John, and I turn ideas into digital experiences that people love.
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et.
-        </p>
-        <div class="button__container flex">
-          <button class="btn--primary">Start a project</button>
-          <button class="btn--accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M17 7l-10 10"></path>
-              <path d="M8 7l9 0l0 9"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="summary flex column">
-          <p>
-            Welcome, make yourself at home. I am a multidisciplinary web
-            designer, designing and building beautiful digital products, for
-            companies around the world.
-            <br /><br />
-            I believe that design should be both functional and aesthetically
-            pleasing, and I am dedicated to delivering exceptional user
-            experiences through thoughtful design and meticulous attention to
-            detail.
-          </p>
-          <div class="button__container flex">
-            <a class="resume__link"> Download resume </a>
-            <button class="btn--accent">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M17 7l-10 10"></path>
-                <path d="M8 7l9 0l0 9"></path>
-              </svg>
-            </button>
+  <body>
+    <header class="flex flex-center">
+      <div class="flex content__container">
+        <div class="avatar__container flex">
+          <div class="avatar">
+            <img src="assets/avatar.png" alt="John's avatar" />
           </div>
+          <p>&copy; John Smith</p>
         </div>
-      </section>
-      <section id="work" class="projects flex column">
-        <h2>The work I do</h2>
-        <div class="projects__nav flex">
-          <ol class="categories flex">
-            <li selected="true">
-              <input type="radio" name="category" id="category-all" checked />
-              <label for="category-all">All</label>
+        <nav>
+          <ul class="nav__links flex">
+            <li aria-current="true">
+              <a href="#about" class="nav__link">About</a>
             </li>
-            <li>
-              <input type="radio" name="category" id="category-design" />
-              <label for="category-design">Design</label>
+            <li aria-current="false">
+              <a href="#work" class="nav__link">Work</a>
             </li>
-            <li>
-              <input type="radio" name="category" id="category-development" />
-              <label for="category-development">Development</label>
-            </li>
-          </ol>
-          <ul class="view__toggle">
-            <li id="gridView">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                <path
-                  d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                <path
-                  d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                <path
-                  d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-              </svg>
-            </li>
-            <li id="listView">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                stroke-width="3"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M4 9l14 0"></path>
-                <path d="M4 15l14 0"></path>
-              </svg>
+            <li aria-current="false">
+              <a href="#solutions" class="nav__link">Solutions</a>
             </li>
           </ul>
-        </div>
-        <div class="project__cards">
-          <div class="project__card">
-            <div class="project__cover">
-              <img src="assets/uideli.png" alt="UIDeli.com design preview" />
-            </div>
-            <div class="card__info">
-              <h4>UIDeli.com</h4>
-              <p>
-                <span class="project__tag">Design</span> +
-                <span class="project__tag">Development</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img
-                src="assets/koto-studio.png"
-                alt="Koto Studio app showcase" />
-            </div>
-            <div class="card__info">
-              <h4>Koto Studio</h4>
-              <p>
-                <span class="project__tag">Development</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img
-                src="assets/switch-black.png"
-                alt="Switch Black site design preview" />
-            </div>
-            <div class="card__info">
-              <h4>Switch Black</h4>
-              <p>
-                <span class="project__tag">Design</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img src="assets/remarket.png" alt="ReMarket site preview" />
-            </div>
-            <div class="card__info">
-              <h4>ReMarket</h4>
-              <p>
-                <span class="project__tag">Development</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img
-                src="assets/another-one.png"
-                alt="Site demo shown on a laptop" />
-            </div>
-            <div class="card__info">
-              <h4>Another One</h4>
-              <p>
-                <span class="project__tag">Development</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__cover">
-              <img
-                src="assets/blender-renders.png"
-                alt="Blender Renders info card preview" />
-            </div>
-            <div class="card__info">
-              <h4>Blender Renders</h4>
-              <p>
-                <span class="project__tag">Design</span> +
-                <span class="project__tag">Development</span>
-                <span class="project__year">2023</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <button class="btn--light">Load more</button>
-      </section>
-      <section id="solutions" class="services">
-        <h2>I can help you with</h2>
-        <div class="service__options grid">
-          <div class="service__option flex column">
-            <h4>Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et.
-            </p>
-            <ul class="flex column">
-              <li>Websites</li>
-              <li>Mobile apps</li>
-              <li>Web apps</li>
-              <li>Design systems</li>
-              <li>Branding</li>
-            </ul>
-          </div>
-          <div class="service__option flex column">
-            <h4>Development</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et.
-            </p>
-            <ul class="flex column">
-              <li>Websites</li>
-              <li>Mobile apps</li>
-              <li>Web apps</li>
-            </ul>
-          </div>
-          <div class="service__option flex column">
-            <h4>Full Package</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et.
-            </p>
-            <ul class="flex column">
-              <li>Design + Development</li>
-            </ul>
-          </div>
-        </div>
-        <div class="pricing flex column">
+          <button></button>
+        </nav>
+      </div>
+    </header>
+    <main class="flex column">
+      <section id="about" class="flex column">
+        <div class="content__container">
+          <h1>
+            I'm John, and I turn ideas into digital experiences that people
+            love.
+          </h1>
           <p>
-            Get the Full Package, Design + Development with requests &
-            revisions. No expensive hourly billing. Flat monthly rate. Pause
-            anytime.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et.
           </p>
-          <h2>$2999 <span>/month</span></h2>
-          <p>
-            Ideal for websites, web aps, and brand design projects, custom code
-            solutions, blogs and app dashboard design.
-          </p>
-        </div>
-
-        <div class="section__footer flex column">
-          <div class="section__footer-row flex">
-            <div class="avatar">
-              <img src="assets/avatar.png" alt="John's avatar" />
-            </div>
-            <button class="btn--light">Start a project</button>
+          <div class="button__container flex">
+            <button class="btn--primary">Start a project</button>
             <button class="btn--accent">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -324,22 +79,238 @@
               </svg>
             </button>
           </div>
-          <p>
-            Don't know if it fits you or not?
-            <br class="section__footer_mobile-break" />
-            <span>Let's have a call</span>
-          </p>
+          <div class="summary">
+            <p>
+              Welcome, make yourself at home. I am a multidisciplinary web
+              designer, designing and building beautiful digital products, for
+              companies around the world.
+              <br /><br />
+              I believe that design should be both functional and aesthetically
+              pleasing, and I am dedicated to delivering exceptional user
+              experiences through thoughtful design and meticulous attention to
+              detail.
+            </p>
+            <div class="button__container flex">
+              <a class="resume__link"> Download resume </a>
+              <button class="btn--accent">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M17 7l-10 10"></path>
+                  <path d="M8 7l9 0l0 9"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="flex flex-center">
+        <div class="content__container flex column">
+          <h2>The work I do</h2>
+          <ol class="categories flex">
+            <li selected="true">
+              <input type="radio" name="category" id="category-all" checked />
+              <label for="category-all">All</label>
+            </li>
+            <li>
+              <input type="radio" name="category" id="category-design" />
+              <label for="category-design">Design</label>
+            </li>
+            <li>
+              <input type="radio" name="category" id="category-development" />
+              <label for="category-development">Development</label>
+            </li>
+          </ol>
+          <div class="work__cards-container">
+            <div class="work__card">
+              <div class="project__cover">
+                <img src="assets/uideli.png" alt="UIDeli.com design preview" />
+              </div>
+              <div class="card__info">
+                <h4>UIDeli.com</h4>
+                <p>
+                  <span class="project__tag">Design</span> +
+                  <span class="project__tag">Development</span>
+                  <span class="project__year">2023</span>
+                </p>
+              </div>
+            </div>
+            <div class="work__card">
+              <div class="project__cover">
+                <img
+                  src="assets/koto-studio.png"
+                  alt="Koto Studio app showcase" />
+              </div>
+              <div class="card__info">
+                <h4>Koto Studio</h4>
+                <p>
+                  <span class="project__tag">Development</span>
+                  <span class="project__year">2023</span>
+                </p>
+              </div>
+            </div>
+            <div class="work__card">
+              <div class="project__cover">
+                <img
+                  src="assets/switch-black.png"
+                  alt="Switch Black site design preview" />
+              </div>
+              <div class="card__info">
+                <h4>Switch Black</h4>
+                <p>
+                  <span class="project__tag">Design</span>
+                  <span class="project__year">2023</span>
+                </p>
+              </div>
+            </div>
+            <div class="work__card">
+              <div class="project__cover">
+                <img src="assets/remarket.png" alt="ReMarket site preview" />
+              </div>
+              <div class="card__info">
+                <h4>ReMarket</h4>
+                <p>
+                  <span class="project__tag">Development</span>
+                  <span class="project__year">2023</span>
+                </p>
+              </div>
+            </div>
+            <div class="work__card">
+              <div class="project__cover">
+                <img
+                  src="assets/another-one.png"
+                  alt="Site demo shown on a laptop" />
+              </div>
+              <div class="card__info">
+                <h4>Another One</h4>
+                <p>
+                  <span class="project__tag">Development</span>
+                  <span class="project__year">2023</span>
+                </p>
+              </div>
+            </div>
+            <div class="work__card">
+              <div class="project__cover">
+                <img
+                  src="assets/blender-renders.png"
+                  alt="Blender Renders info card preview" />
+              </div>
+              <div class="card__info">
+                <h4>Blender Renders</h4>
+                <p>
+                  <span class="project__tag">Design</span> +
+                  <span class="project__tag">Development</span>
+                  <span class="project__year">2023</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="btn--light">Load more</button>
+        </div>
+      </section>
+      <section id="solutions" class="services flex flex-center">
+        <div class="content__container">
+          <h2>I can help you with</h2>
+          <div class="service__options grid">
+            <div class="service__option flex column">
+              <h4>Design</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et.
+              </p>
+              <ul class="flex column">
+                <li>Websites</li>
+                <li>Mobile apps</li>
+                <li>Web apps</li>
+                <li>Design systems</li>
+                <li>Branding</li>
+              </ul>
+            </div>
+            <div class="service__option flex column">
+              <h4>Development</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et.
+              </p>
+              <ul class="flex column">
+                <li>Websites</li>
+                <li>Mobile apps</li>
+                <li>Web apps</li>
+              </ul>
+            </div>
+            <div class="service__option flex column">
+              <h4>Full Package</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et.
+              </p>
+              <ul class="flex column">
+                <li>Design + Development</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pricing flex column">
+            <p>
+              Get the Full Package, Design + Development with requests &
+              revisions. No expensive hourly billing. Flat monthly rate. Pause
+              anytime.
+            </p>
+            <h2>$2999 <span>/month</span></h2>
+            <p>
+              Ideal for websites, web aps, and brand design projects, custom
+              code solutions, blogs and app dashboard design.
+            </p>
+          </div>
+          <div class="section__footer flex column">
+            <div class="section__footer-row flex">
+              <div class="avatar">
+                <img src="assets/avatar.png" alt="John's avatar" />
+              </div>
+              <button class="btn--light">Start a project</button>
+              <button class="btn--accent">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M17 7l-10 10"></path>
+                  <path d="M8 7l9 0l0 9"></path>
+                </svg>
+              </button>
+            </div>
+            <p>
+              Don't know if it fits you or not?
+              <br class="section__footer_mobile-break" />
+              <span>Let's have a call</span>
+            </p>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
-      <p class="social__label">SOCIAL MEDIA</p>
-      <ul class="social__links flex">
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Linkedin</a></li>
-        <li><a href="#">Github</a></li>
-        <li><a href="#">Dribbble</a></li>
-      </ul>
+    <footer class="flex flex-center">
+      <div class="content__container">
+        <p class="social__label">SOCIAL MEDIA</p>
+        <ul class="social__links flex">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Linkedin</a></li>
+          <li><a href="#">Github</a></li>
+          <li><a href="#">Dribbble</a></li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
