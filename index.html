@@ -50,7 +50,7 @@
       </div>
     </header>
     <main class="flex column">
-      <section id="about" class="introduction flex column">
+      <section id="about" class="flex column">
         <div class="content__container">
           <h1>
             I'm John, and I turn ideas into digital experiences that people
@@ -112,64 +112,25 @@
           </div>
         </div>
       </section>
-      <section id="work" class="projects flex flex-center">
-        <div class="content__container">
+      <section id="work" class="flex flex-center">
+        <div class="content__container flex column">
           <h2>The work I do</h2>
-          <div class="projects__nav flex">
-            <ol class="categories flex">
-              <li selected="true">
-                <input type="radio" name="category" id="category-all" checked />
-                <label for="category-all">All</label>
-              </li>
-              <li>
-                <input type="radio" name="category" id="category-design" />
-                <label for="category-design">Design</label>
-              </li>
-              <li>
-                <input type="radio" name="category" id="category-development" />
-                <label for="category-development">Development</label>
-              </li>
-            </ol>
-            <ul class="view__toggle">
-              <li id="gridView">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path
-                    d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                  <path
-                    d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                  <path
-                    d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                  <path
-                    d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                </svg>
-              </li>
-              <li id="listView">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  stroke-width="3"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M4 9l14 0"></path>
-                  <path d="M4 15l14 0"></path>
-                </svg>
-              </li>
-            </ul>
-          </div>
-          <div class="project__cards">
-            <div class="project__card">
+          <ol class="categories flex">
+            <li selected="true">
+              <input type="radio" name="category" id="category-all" checked />
+              <label for="category-all">All</label>
+            </li>
+            <li>
+              <input type="radio" name="category" id="category-design" />
+              <label for="category-design">Design</label>
+            </li>
+            <li>
+              <input type="radio" name="category" id="category-development" />
+              <label for="category-development">Development</label>
+            </li>
+          </ol>
+          <div class="work__cards-container">
+            <div class="work__card">
               <div class="project__cover">
                 <img src="assets/uideli.png" alt="UIDeli.com design preview" />
               </div>
@@ -182,7 +143,7 @@
                 </p>
               </div>
             </div>
-            <div class="project__card">
+            <div class="work__card">
               <div class="project__cover">
                 <img
                   src="assets/koto-studio.png"
@@ -196,7 +157,7 @@
                 </p>
               </div>
             </div>
-            <div class="project__card">
+            <div class="work__card">
               <div class="project__cover">
                 <img
                   src="assets/switch-black.png"
@@ -210,7 +171,7 @@
                 </p>
               </div>
             </div>
-            <div class="project__card">
+            <div class="work__card">
               <div class="project__cover">
                 <img src="assets/remarket.png" alt="ReMarket site preview" />
               </div>
@@ -222,7 +183,7 @@
                 </p>
               </div>
             </div>
-            <div class="project__card">
+            <div class="work__card">
               <div class="project__cover">
                 <img
                   src="assets/another-one.png"
@@ -236,7 +197,7 @@
                 </p>
               </div>
             </div>
-            <div class="project__card">
+            <div class="work__card">
               <div class="project__cover">
                 <img
                   src="assets/blender-renders.png"
