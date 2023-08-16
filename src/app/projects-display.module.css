@@ -1,0 +1,14 @@
+.work__cardsContainer {
+  display: grid;
+  margin: 0 auto 0 auto;
+}
+
+.btnAccent {
+  margin-top: clamp(2.5rem, 5vw, 3rem);
+  margin-inline: auto;
+  padding: 0.81em 1.5em;
+  border: none;
+  background-color: var(--clr-accent);
+  color: white;
+  font-weight: 500;
+}
