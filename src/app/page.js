@@ -88,8 +88,18 @@ export default function Home() {
                 meticulous attention to detail.
               </p>
               <div className={`${styles.button__container} ${styles.flex}`}>
-                <a className={styles.resume__link}> Download resume </a>
-                <button className={`${styles.btnAccent} ${styles.accentHover}`}>
+                <a
+                  className={styles.cv__link}
+                  href="/CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Download CV
+                </a>
+                <a
+                  className={`${styles.btnAccent} ${styles.accentHover}`}
+                  href="/CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -104,7 +114,7 @@ export default function Home() {
                     <path d="M17 7l-10 10"></path>
                     <path d="M8 7l9 0l0 9"></path>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -217,16 +227,18 @@ export default function Home() {
           <p className={styles.social__label}>SOCIAL MEDIA</p>
           <ul className={`${styles.social__links} ${styles.flex}`}>
             <li>
-              <a href="#">Twitter</a>
+              <a href="https://www.x.com">X</a>
             </li>
             <li>
-              <a href="#">Linkedin</a>
+              <a href="https://www.linkedin.com/in/kostas-kvietinskas/">
+                Linkedin
+              </a>
             </li>
             <li>
-              <a href="#">Github</a>
+              <a href="https://www.github.com/KostasKv">Github</a>
             </li>
             <li>
-              <a href="#">Dribbble</a>
+              <a href="https://www.dribbble.com">Dribbble</a>
             </li>
           </ul>
         </div>

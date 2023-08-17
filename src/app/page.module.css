@@ -69,6 +69,9 @@
   height: 3.25em;
   background-color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
+  color: var(--clr-light-100);
+  border-radius: 100vh;
+  cursor: pointer;
 }
 
 .btnLight {
@@ -220,14 +223,13 @@ header .content__container {
   font-weight: 500;
 }
 
-/* resume links*/
-.resume__link {
+.cv__link {
   position: relative;
   font-weight: 500;
   cursor: pointer;
 }
 
-.resume__link::after {
+.cv__link::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -240,9 +242,14 @@ header .content__container {
   transform-origin: left bottom;
 }
 
-.resume__link:hover::after {
+.cv__link:hover {
+  color: var(--clr-light-100);
+}
+
+.cv__link:hover::after {
   animation: line-from-left 300ms ease-in;
   opacity: 0.8;
+  background-color: var(--clr-light-100);
 }
 
 /* Work section */
