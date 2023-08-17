@@ -54,7 +54,17 @@ export function ProjectsDisplay() {
     },
   ];
 
-  const projectItems = projects.map((projectInfo) => (
+  var filteredProjects;
+
+  if (["design", "development"].includes(category)) {
+    filteredProjects = projects.filter((projectInfo) => {
+      return projectInfo.categories.includes(category);
+    });
+  } else {
+    filteredProjects = projects;
+  }
+
+  const projectItems = filteredProjects.map((projectInfo) => (
     <ProjectCard key={projectInfo.title} {...projectInfo} />
   ));
 
