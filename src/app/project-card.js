@@ -6,7 +6,7 @@ export function ProjectCard({ src, title, categories, year }) {
   return (
     <div className={styles.work__card}>
       <div className={styles.project__cover}>
-        <Image src={src} alt="UIDeli.com design preview" />
+        <Image src={src} alt="UIDeli.com design preview" placeholder="blur" />
       </div>
       <div className={styles.card__info}>
         <h4>{title}</h4>

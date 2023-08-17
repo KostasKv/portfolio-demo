@@ -16,19 +16,26 @@ export default function Home() {
             <p>&copy; John Smith</p>
           </div>
           <nav>
-            <ul className={`${styles.nav__links} ${styles.flex}`}>
+            <ul
+              className={`${styles.nav__links} ${styles.flex} ${styles.accent}`}>
               <li aria-current="true">
-                <a href="#about" className={styles.nav__link}>
+                <a
+                  href="#about"
+                  className={`${styles.nav__link} ${styles.accentHover}`}>
                   About
                 </a>
               </li>
               <li aria-current="false">
-                <a href="#work" className={styles.nav__link}>
+                <a
+                  href="#work"
+                  className={`${styles.nav__link} ${styles.accentHover}`}>
                   Work
                 </a>
               </li>
               <li aria-current="false">
-                <a href="#solutions" className={styles.nav__link}>
+                <a
+                  href="#solutions"
+                  className={`${styles.nav__link} ${styles.accentHover}`}>
                   Solutions
                 </a>
               </li>
@@ -52,7 +59,7 @@ export default function Home() {
             </p>
             <div className={`${styles.button__container} ${styles.flex}`}>
               <button className={styles.btnPrimary}>Start a project</button>
-              <button className={styles.btnAccent}>
+              <button className={`${styles.btnAccent} ${styles.accentHover}`}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -82,7 +89,7 @@ export default function Home() {
               </p>
               <div className={`${styles.button__container} ${styles.flex}`}>
                 <a className={styles.resume__link}> Download resume </a>
-                <button className={styles.btnAccent}>
+                <button className={`${styles.btnAccent} ${styles.accentHover}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -179,7 +186,7 @@ export default function Home() {
                   <Image src={avatarImg} alt="John's avatar" />
                 </div>
                 <button className={styles.btnLight}>Start a project</button>
-                <button className={styles.btnAccent}>
+                <button className={`${styles.btnAccent} ${styles.accentHover}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

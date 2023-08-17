@@ -21,3 +21,9 @@
   color: white;
   font-weight: 500;
 }
+
+.btnAccent:hover {
+  color: var(--clr-accent);
+  background: var(--clr-light-100);
+  transition-duration: 100ms;
+}
