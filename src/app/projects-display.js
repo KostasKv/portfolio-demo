@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 
-import Masonry from "react-responsive-masonry";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import styles from "./projects-display.module.css";
 import anotherOneImg from "@public/another-one.png";
 import blenderRendersImg from "@public/blender-renders.png";
@@ -55,16 +54,21 @@ export function ProjectsDisplay() {
     },
   ];
 
+  const projectItems = projects.map((projectInfo) => (
+    <ProjectCard key={projectInfo.title} {...projectInfo} />
+  ));
+
   return (
     <>
       <CategorySelector
         selected={category}
         onSelect={(newCategory) => setCategory(newCategory)}
       />
-      <div className={styles.work__cardsContainer}>
-        {projects.map((projectInfo) => (
-          <ProjectCard key={projectInfo.title} {...projectInfo} />
-        ))}
+
+      <div className={styles.cardsContainer}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 0: 1, 750: 2 }}>
+          <Masonry gutter={"3rem"}>{projectItems}</Masonry>
+        </ResponsiveMasonry>
       </div>
       <button className={styles.btnAccent}>Load more</button>
     </>

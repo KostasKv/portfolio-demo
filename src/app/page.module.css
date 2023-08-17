@@ -267,7 +267,8 @@ header .content__container {
 
 .work__card {
   margin-top: 3.75rem;
-  width: 405px;
+  max-width: 26rem;
+  width: 100%;
 }
 
 .card__info {
@@ -459,6 +460,12 @@ header .content__container {
   /* .view__toggle {
     display: flex;
   } */
+}
+
+@media screen and (min-width: 760px) {
+  .work__card {
+    max-width: 36rem;
+  }
 }
 
 @media screen and (min-width: 600px) {

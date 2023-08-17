@@ -26,12 +26,11 @@
 
 /* global styles */
 body {
-  height: 100%;
+  min-height: 100vh;
   font-family: "Satoshi", sans-serif;
   font-size: 1rem;
   color: var(--clr-primary);
   background-color: var(--clr-background);
-  align-items: center;
 }
 
 body > * {
@@ -47,10 +46,6 @@ footer {
 
 header {
   padding-top: clamp(1.25rem, 7vw - 0.5rem, 2.5rem);
-}
-
-main {
-  isolation: isolate;
 }
 
 footer {

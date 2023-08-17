@@ -1,6 +1,9 @@
-.work__cardsContainer {
-  display: grid;
-  margin: 0 auto 0 auto;
+/* Patch fix for react-responsive-masonry layout's items not centering 
+   correctly within their respective column. Why they are behaving like this here
+   (and yet work fine on a replica minimal demo project) I do not know.
+   There's probably a better fix. */
+.cardsContainer > div > div > div {
+  align-items: center;
 }
 
 .btnAccent {
