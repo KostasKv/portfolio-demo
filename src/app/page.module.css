@@ -285,6 +285,7 @@ header .content__container {
   height: 100%;
   object-fit: cover;
   border: 13px solid var(--clr-accent);
+  cursor: pointer;
 }
 
 .project__year {
@@ -464,7 +465,7 @@ header .content__container {
 
 @media screen and (min-width: 760px) {
   .work__card {
-    max-width: 36rem;
+    max-width: 28rem;
   }
 }
 
