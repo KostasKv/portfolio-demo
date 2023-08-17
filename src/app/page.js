@@ -227,18 +227,36 @@ export default function Home() {
           <p className={styles.social__label}>SOCIAL MEDIA</p>
           <ul className={`${styles.social__links} ${styles.flex}`}>
             <li>
-              <a href="https://www.x.com">X</a>
+              <a
+                href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                X
+              </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/kostas-kvietinskas/">
+              <a
+                href="https://www.linkedin.com/in/kostas-kvietinskas/"
+                target="_blank"
+                rel="noopener noreferrer">
                 Linkedin
               </a>
             </li>
             <li>
-              <a href="https://www.github.com/KostasKv">Github</a>
+              <a
+                href="https://www.github.com/KostasKv"
+                target="_blank"
+                rel="noopener noreferrer">
+                Github
+              </a>
             </li>
             <li>
-              <a href="https://www.dribbble.com">Dribbble</a>
+              <a
+                href="https://www.dribbble.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                Dribbble
+              </a>
             </li>
           </ul>
         </div>
