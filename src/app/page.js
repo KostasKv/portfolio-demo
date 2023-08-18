@@ -11,7 +11,7 @@ export default function Home() {
         <div className={`${styles.flex} ${styles.content__container}`}>
           <div className={`${styles.avatar__container} ${styles.flex}`}>
             <div className={styles.avatar}>
-              <Image src={avatarImg} alt="John's avatar" />
+              <Image src={avatarImg} alt="John's avatar" placeholder="blur" />
             </div>
             <p>&copy; John Smith</p>
           </div>
@@ -193,7 +193,11 @@ export default function Home() {
               className={`${styles.section__footer} ${styles.flex} ${styles.column}`}>
               <div className={`${styles.section__footerRow} ${styles.flex}`}>
                 <div className={styles.avatar}>
-                  <Image src={avatarImg} alt="John's avatar" />
+                  <Image
+                    src={avatarImg}
+                    alt="John's avatar"
+                    placeholder="blur"
+                  />
                 </div>
                 <button className={styles.btnLight}>Start a project</button>
                 <button className={`${styles.btnAccent} ${styles.accentHover}`}>
